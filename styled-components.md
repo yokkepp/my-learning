@@ -31,7 +31,7 @@ import styled from 'styled-components'
 import styled from 'styled-components';
 
 // 名前 = styled.要素名
-const STitle = styled.h1`
+const Title = styled.h1`
     color: red;
     text-decoration: underline;
 `
@@ -39,26 +39,26 @@ const STitle = styled.h1`
 
 ```js
 /* App.jsx */
-import STitle from './components/styled.jsx';
+import Title from './components/styled.jsx';
 
-const App = () => {
+export const App = () => {
     return (
       <Title>カウントするサンプルアプリです</Title>
     );
 };
-
-export default App;
 ```
 ### 引数の受け渡し
 ```js
-/* styled.jsx */
-import styled from 'styeld-components';
 
-const Input = styled.input`
-    height: 50px;
-    width: 150px;
-    color: white;
-    background-color: ${props => props.background || "gray"}
+export const Header = () => {
+    return (
+        <Title color={"red"}>これはタイトルです</Title>
+    )
+}
+
+const Title = styled.h1`
+    color: ${ props => props.color || "gray"};
+    text-decoration: underline;
 `
 
 ```
