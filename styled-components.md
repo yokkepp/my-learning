@@ -62,5 +62,3 @@ const Input = styled.input`
 `
 
 ```
-${props => props.inputColor || "palevioletred"};
-
